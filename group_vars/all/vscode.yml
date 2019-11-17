@@ -1,5 +1,9 @@
 ---
 
+vscode_directory: "/usr/share/code"
+vscode_upgrade_days: 7
+vscode_e_upgrade_days: 2
+
 vscode_package_url: "https://vscode-update.azurewebsites.net/latest/linux-deb-x64/stable"
 
 vscode_extensions:
@@ -7,12 +11,12 @@ vscode_extensions:
   - formulahendry.code-runner
   - donjayamanne.githistory
   - eamodio.gitlens
- # - ms-vscode.Go
+# - ms-vscode.Go
   - vincaslt.highlight-matching-tag
   - oderwat.indent-rainbow
-  - yzhang.markdown-all-in-one
- # - PKief.material-icon-theme
- # - ms-python.python
+# - yzhang.markdown-all-in-one
+# - PKief.material-icon-theme
+# - ms-python.python
   - humao.rest-client
   - Gruntfuggly.todo-tree
   - shardulm94.trailing-spaces
@@ -21,5 +25,7 @@ vscode_extensions:
   - vscodevim.vim
   - vscoss.vscode-ansible
   - wayou.vscode-todo-highlight
+  - streetsidesoftware.code-spell-checker
+  - davidanson.vscode-markdownlint
 
 ...

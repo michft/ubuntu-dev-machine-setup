@@ -1,13 +1,21 @@
 ---
 
+- name: Checking VSCode age
+  stat:
+    path: /usr/share/code/bin/code
+  register: vscode_result
+
 - name: download and install latest visual studio code
   apt:
     deb: "{{ vscode_package_url }}"
+  when: ((ansible_date_time.epoch|int - vscode_result.stat.mtime) > (vscode_upgrade_days * 60 * 60 * 24))
+  register: vscode_result
 
 - name: install some popular vscode extensions
   command: code --install-extension {{ item }}
   with_items: "{{ vscode_extensions }}"
   become: yes
   become_user: "{{ local_username }}"
-
+  # when: ((ansible_date_time.epoch|int - vscode_e_result.stat.mtime) > (vscode_e_upgrade_days * 60 * 60 * 24))
+  # register: vscode_e_result
 ...
