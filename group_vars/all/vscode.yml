@@ -7,16 +7,17 @@ vscode_extensions:
   - formulahendry.code-runner
   - donjayamanne.githistory
   - eamodio.gitlens
-  - ms-vscode.Go
+ # - ms-vscode.Go
   - vincaslt.highlight-matching-tag
   - oderwat.indent-rainbow
   - yzhang.markdown-all-in-one
-  - PKief.material-icon-theme
-  - ms-python.python
+ # - PKief.material-icon-theme
+ # - ms-python.python
   - humao.rest-client
   - Gruntfuggly.todo-tree
   - shardulm94.trailing-spaces
-  - Equinusocio.vsc-material-theme
+#  - Equinusocio.vsc-material-theme
+  - ms-vscode.vscode-typescript-tslint-plugin
   - vscodevim.vim
   - vscoss.vscode-ansible
   - wayou.vscode-todo-highlight

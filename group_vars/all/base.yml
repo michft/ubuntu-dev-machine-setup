@@ -53,7 +53,7 @@ base_developer_tools:
   - clusterssh
   - colordiff
   - curl
-  - default-jre-headless
+  # - default-jre-headless
   - dos2unix
   - expect
   - filezilla
@@ -66,8 +66,9 @@ base_developer_tools:
   - htop
   - httpie
   - inotify-tools
-  - ipython
-  - ipython3
+  - iotop
+  # - ipython
+  # - ipython3
   - jq
   - kwalify
   - makeself
@@ -75,44 +76,45 @@ base_developer_tools:
   - most
   - netcat
   - nmap
-  - nodejs
+  # - nodejs
+  - pass
   - pandoc
   - parallel
-  - pep8
+  # - pep8
   - powerline
   - pry
-  - pssh
+  # - pssh
   #- puppet
   #- puppet-lint
-  - pv
-  - pylint
-  - pylint3
-  - python3-pep8
-  - python3-pep8-naming
-  - python3-pip
-  - python-autopep8
-  - python-jmespath
-  - python-pep8
-  - python-pep8-naming
-  - python-pip
-  - python-pygments
+  # - pv
+  # - pylint
+  # - pylint3
+  # - python3-pep8
+  # - python3-pep8-naming
+  # - python3-pip
+  # - python-autopep8
+  # - python-jmespath
+  # - python-pep8
+  # - python-pep8-naming
+  # - python-pip
+  # - python-pygments
   - ranger
   - recode
   - rename
-  - ruby
-  - ruby-dev
+  # - ruby
+  # - ruby-dev
   - shellcheck
   - siege
   - socat
   - sshfs
   - sshpass
-  - sslscan
+  #- sslscan
   - tilix
   - tmux
   - tree
   - uget
-  - virtualenv
-  - virtualenvwrapper
+  # - virtualenv
+  # - virtualenvwrapper
   - xclip
   - zeal
 
@@ -131,7 +133,7 @@ base_media_tools:
   - soundconverter
   - vlc
 
-base_google_chrome_url: "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+# base_google_chrome_url: "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 
 base_git_bash_prompt_url: "https://github.com/magicmonty/bash-git-prompt.git"
 

@@ -83,24 +83,24 @@
     name: "{{ base_developer_tools }}"
     state: present
 
-- block:
-    - name: Create directories for golang
-      file:
-        path: "~{{ local_username }}/{{ item }}"
-        state: directory
-      with_items:
-       - go
-       - go/src
-       - go/bin
+# - block:
+#     - name: Create directories for golang
+#       file:
+#         path: "~{{ local_username }}/{{ item }}"
+#         state: directory
+#       with_items:
+#        - go
+#        - go/src
+#        - go/bin
 
-    - name: Make GOPATH available in .bashrc
-      lineinfile:
-        path: "~{{ local_username }}/.bashrc"
-        line: "{{ item }}"
-        create: yes
-      with_items:
-        - export GOPATH=$HOME/go
-        - export PATH=$PATH:$GOPATH/bin
+#     - name: Make GOPATH available in .bashrc
+#       lineinfile:
+#         path: "~{{ local_username }}/.bashrc"
+#         line: "{{ item }}"
+#         create: yes
+#       with_items:
+#         - export GOPATH=$HOME/go
+#         - export PATH=$PATH:$GOPATH/bin
 
 - name: install download tools
   apt:
@@ -112,9 +112,9 @@
     name: "{{ base_media_tools }}"
     state: present
 
-- name: install google chrome
-  apt:
-    deb: "{{ base_google_chrome_url }}"
+# - name: install google chrome
+#   apt:
+#     deb: "{{ base_google_chrome_url }}"
 
 - name: install bash git prompt
   git:
@@ -166,14 +166,14 @@
       shell: echo 'y' | vboxmanage extpack install --replace /usr/share/virtualbox-ext-pack/Oracle*
   when: not virtual_machine_mode
 
-- block:
-    - name: install openssh-server package (1/2)
-      apt:
-        name: "{{ base_openssh_server.apt_package }}"
-        state: present
-    - name: enable and start ssh (2/2)
-      service:
-        name: "{{ base_openssh_server.service }}"
-        state: started
-        enabled: yes
-  when: not laptop_mode
+# - block:
+#     - name: install openssh-server package (1/2)
+#       apt:
+#         name: "{{ base_openssh_server.apt_package }}"
+#         state: present
+#     - name: enable and start ssh (2/2)
+#       service:
+#         name: "{{ base_openssh_server.service }}"
+#         state: started
+#         enabled: yes
+#   when: not laptop_mode
